@@ -1,0 +1,8 @@
+# Gitleaks config: default rules plus a narrow allowlist for a known fake test fixture.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Fake AWS key used only to test the output secret guardrail (in git history)"
+regexes = ['''AKIAABCDEFGHIJKLMNOP''']
+regexTarget = "match"
