@@ -1,0 +1,18 @@
+{"id": "g01", "question": "How do I reset my password?", "groups": ["all-employees"], "expected_doc": "KB-102", "keywords": ["self-service", "portal"]}
+{"id": "g02", "question": "How long until a locked account unlocks?", "groups": ["all-employees"], "expected_doc": "KB-102", "keywords": ["30 minutes"]}
+{"id": "g03", "question": "How many failed sign-in attempts lock my account?", "groups": ["all-employees"], "expected_doc": "KB-102", "keywords": ["5 failed"]}
+{"id": "g04", "question": "Will the service desk ask for my password?", "groups": ["all-employees"], "expected_doc": "KB-102", "keywords": ["never"]}
+{"id": "g05", "question": "How do I connect to the corporate VPN?", "groups": ["all-employees"], "expected_doc": "KB-101", "keywords": ["GlobalConnect"]}
+{"id": "g06", "question": "The VPN client says gateway unreachable, what do I do?", "groups": ["all-employees"], "expected_doc": "KB-101", "keywords": ["switch networks"]}
+{"id": "g07", "question": "How long do VPN sessions last before disconnect?", "groups": ["all-employees"], "expected_doc": "KB-101", "keywords": ["12 hours"]}
+{"id": "g08", "question": "How do I request a replacement laptop?", "groups": ["all-employees"], "expected_doc": "KB-103", "keywords": ["hardware request"]}
+{"id": "g09", "question": "How often are laptops refreshed?", "groups": ["all-employees"], "expected_doc": "KB-103", "keywords": ["4 years"]}
+{"id": "g10", "question": "When must my old laptop be returned?", "groups": ["all-employees"], "expected_doc": "KB-103", "keywords": ["10 business days"]}
+{"id": "g11", "question": "Can engineering roles request a 64 GB memory laptop?", "groups": ["all-employees", "engineering"], "expected_doc": "KB-103", "keywords": ["manager approval"]}
+{"id": "g12", "question": "When is ledger write access frozen during quarter close?", "groups": ["finance"], "expected_doc": "KB-201", "keywords": ["day 1 to day 5"]}
+{"id": "g13", "question": "Who approves emergency ledger changes during the freeze?", "groups": ["finance"], "expected_doc": "KB-201", "keywords": ["controller"]}
+{"id": "g14", "question": "Who approves extended leave requests?", "groups": ["hr"], "expected_doc": "KB-301", "keywords": ["HR leave console"]}
+{"id": "g15", "question": "How long are leave records retained?", "groups": ["hr"], "expected_doc": "KB-301", "keywords": ["7 years"]}
+{"id": "g16", "question": "What is the cafeteria menu today?", "groups": ["all-employees"], "expected_doc": null, "keywords": []}
+{"id": "g17", "question": "How do I expense a conference ticket?", "groups": ["all-employees"], "expected_doc": null, "keywords": []}
+{"id": "g18", "question": "How do I fix calendar sync issues?", "groups": ["all-employees"], "expected_doc": "KB-999", "keywords": ["re-adding"]}

@@ -1,0 +1,7 @@
+pyyaml>=6.0
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+# Production model clients (install the one you use):
+# openai>=1.40 azure-identity>=1.17   # LLM_PROVIDER=azure
+# boto3>=1.34                          # LLM_PROVIDER=bedrock

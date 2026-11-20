@@ -1,0 +1,54 @@
+# Use-case intake. Scores are 1-5. "low_risk" is 5 when risk is LOW.
+# governance: each candidate must clear every control in governance_controls to be approved.
+governance_controls:
+  - enterprise_ai_strategy
+  - responsible_ai_standard
+  - data_classification
+  - approved_model_list
+  - privacy_legal_review
+  - model_risk_management
+
+weights: {value: 0.35, feasibility: 0.25, low_risk: 0.2, data_ready: 0.2}
+cutoffs: {value_screen: 3, feasibility_and_data: 3}
+
+candidates:
+  - name: Contract clause extraction
+    owner: Legal Ops
+    scores: {value: 5, feasibility: 4, low_risk: 4, data_ready: 5}
+    governance: [enterprise_ai_strategy, responsible_ai_standard, data_classification, approved_model_list, privacy_legal_review, model_risk_management]
+  - name: IT support copilot
+    owner: IT Service Desk
+    scores: {value: 5, feasibility: 5, low_risk: 4, data_ready: 4}
+    governance: [enterprise_ai_strategy, responsible_ai_standard, data_classification, approved_model_list, privacy_legal_review, model_risk_management]
+  - name: Sales proposal drafting
+    owner: Sales Enablement
+    scores: {value: 4, feasibility: 4, low_risk: 3, data_ready: 4}
+    governance: [enterprise_ai_strategy, responsible_ai_standard, data_classification, approved_model_list, privacy_legal_review, model_risk_management]
+  - name: Code review assistant
+    owner: Engineering Productivity
+    scores: {value: 4, feasibility: 5, low_risk: 4, data_ready: 4}
+    governance: [enterprise_ai_strategy, responsible_ai_standard, data_classification, approved_model_list, privacy_legal_review, model_risk_management]
+  - name: Supplier invoice matching
+    owner: Finance IT
+    scores: {value: 4, feasibility: 4, low_risk: 4, data_ready: 3}
+    governance: [enterprise_ai_strategy, responsible_ai_standard, data_classification, approved_model_list, privacy_legal_review, model_risk_management]
+  - name: Policy Q&A for HR service desk
+    owner: HR & Corporate IT
+    scores: {value: 4, feasibility: 4, low_risk: 3, data_ready: 4}
+    governance: [enterprise_ai_strategy, responsible_ai_standard, data_classification, approved_model_list, privacy_legal_review, model_risk_management]
+  - name: Open-ended HR chatbot
+    owner: HR
+    scores: {value: 3, feasibility: 3, low_risk: 1, data_ready: 2}
+    governance: [enterprise_ai_strategy]
+  - name: Demand forecast narrative
+    owner: Supply chain IT
+    scores: {value: 3, feasibility: 3, low_risk: 4, data_ready: 2}
+    governance: [enterprise_ai_strategy, responsible_ai_standard, data_classification]
+  - name: Marketing slogan generator
+    owner: Marketing
+    scores: {value: 2, feasibility: 5, low_risk: 4, data_ready: 5}
+    governance: [enterprise_ai_strategy, approved_model_list]
+  - name: Meeting notes summarizer
+    owner: Corporate IT
+    scores: {value: 3, feasibility: 4, low_risk: 3, data_ready: 3}
+    governance: [enterprise_ai_strategy, responsible_ai_standard, data_classification, approved_model_list, privacy_legal_review]

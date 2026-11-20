@@ -1,0 +1,43 @@
+# Pin 6: teams don't need a list of platform features; they need a pattern they can copy.
+# Each pattern = platform capabilities + template repo + reference architecture + security runbook.
+platforms: [Azure AI Foundry, AWS Bedrock, Internal AI platform]
+
+capabilities:
+  model_catalog:     "Approved models only (approved_model_list control)"
+  ai_gateway:        "Quotas, routing, fallback, audit logging (APIM / internal gateway)"
+  vector_search:     "Managed index with security trimming (Azure AI Search / OpenSearch)"
+  guardrails:        "Content safety, prompt shields, PII redaction (AI Content Safety / Bedrock Guardrails)"
+  evaluation:        "Golden + attack sets and release gate (Foundry evaluations / Bedrock eval / promptfoo / PyRIT)"
+  agent_runtime:     "Tool execution with least privilege and human approval"
+
+patterns:
+  - id: chat-over-documents
+    name: Chat over documents (RAG)
+    uses: [model_catalog, ai_gateway, vector_search, guardrails, evaluation]
+    template: this repository (copilot/)
+    runbook: docs/runbooks/rag.md
+    key_controls: [per-user ACL trimming, citations required, indirect-injection screening]
+  - id: extraction-classification
+    name: Extraction & classification
+    uses: [model_catalog, ai_gateway, guardrails, evaluation]
+    template: planned - templates/extraction (structured JSON output + schema validation)
+    runbook: planned
+    key_controls: [schema-validated output, data classification on inputs, human review below confidence threshold]
+  - id: summarization-pipeline
+    name: Summarization pipeline
+    uses: [model_catalog, ai_gateway, guardrails]
+    template: planned - templates/summarization (batch, queue-driven)
+    runbook: planned
+    key_controls: [PII redaction before model call, retention limits, groundedness eval]
+  - id: agent-with-approved-tools
+    name: Agent with approved tools
+    uses: [model_catalog, ai_gateway, guardrails, agent_runtime]
+    template: planned - templates/agent (Semantic Kernel / Bedrock Agents)
+    runbook: planned
+    key_controls: [tool allow-list, scoped credentials per tool, human approval for writes, max-step limit]
+  - id: copilot-in-workflow
+    name: Copilot inside a workflow
+    uses: [model_catalog, ai_gateway, vector_search, guardrails]
+    template: planned - templates/workflow-copilot
+    runbook: planned
+    key_controls: [user-delegated identity, no standing access, action audit trail]
